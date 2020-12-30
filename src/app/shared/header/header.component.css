@@ -1,0 +1,19 @@
+a {
+  color: #887dbd;
+  text-decoration: none;
+  font-style: normal;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.navbar-nav>.user-menu>.dropdown-menu {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 0;
+  width: 180px;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>.user-body {
+  border-bottom: 0px;
+  border-top: 0px;
+  padding: 15px;
+}

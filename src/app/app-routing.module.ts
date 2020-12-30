@@ -1,15 +1,13 @@
-import { HomeComponent } from './components/shared/home/home.component';
-import { LoginComponent } from './components/shared/login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
   {
-    path: '', component: LoginComponent
+    path: '', loadChildren: './auth/login/login.module#LoginModule'
   },
   {
-    path: 'home', component: HomeComponent
+    path: 'home', loadChildren: './shared/home/home.module#HomeModule'
   }
 ];
 

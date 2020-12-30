@@ -25,9 +25,17 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/all.min.css",
+              "src/assets/css/adminlte.min.css",
+              "src/assets/css/fontawesome.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/jquery-ui.min.js",
+              "src/assets/js/adminlte.min.js",
+              "src/assets/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

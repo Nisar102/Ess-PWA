@@ -1,0 +1,21 @@
+.main-sidebar {
+  background-color: #414144;
+}
+
+.brand-link {
+  background-color: #867cb9;
+}
+.sidebar .nav-link p {
+  padding-left: 12px;
+}
+
+/* .text-sm .nav-legacy.nav-sidebar .nav-item>.nav-link>.nav-icon {
+  font-size: 16px;
+}
+
+.with-background {
+  background-color: #282b2c;
+  padding: 5px;
+  border-radius: 50px;
+  color: white;
+} */
