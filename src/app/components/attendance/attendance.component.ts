@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class AttendanceComponent implements OnInit {
 
   data = [];
+  myData: any;
 
   constructor(private _apiService: EssService) { }
 

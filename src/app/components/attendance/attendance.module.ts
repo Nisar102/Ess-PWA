@@ -1,3 +1,4 @@
+import { AttendanceComponent } from './attendance.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -8,12 +9,11 @@ import { AttendanceRoutingModule } from './attendance-routing.module';
 
 @NgModule({
   declarations: [
-
+    AttendanceComponent
   ],
   imports: [
-    ReactiveFormsModule,
-    FormsModule,
     CommonModule,
+    FormsModule,
     AttendanceRoutingModule
   ],
   providers: []
