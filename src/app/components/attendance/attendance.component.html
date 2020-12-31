@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        Employee Attendance
+      </div>
+      <div class="card-body">
+
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Time In</th>
+                <th>Time Out</th>
+                <th>Minutes worked</th>
+                <th>Status</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Late Minute</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of data">
+                <td>{{item.Date}}</td>
+                <td>{{item.TimeIn}}</td>
+                <td>{{item.TimeOut}}</td>
+                <td>{{item.MintuesWorked}}</td>
+                <td>{{item.Status}}</td>
+                <td>{{item.StartTime}}</td>
+                <td>{{item.EndTime}}</td>
+                <td>{{item.LateMinute}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

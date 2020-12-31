@@ -16,8 +16,9 @@ export class EssService {
     return this.http.get(environment.baseUrl + 'Login/GetUserLogin?Username=' + Username + '&Password=' + Password);
   }
 
-  GetAttendance(Username, Password) {
-    return this.http.get(environment.baseUrl + 'Login/GetUserLogin?Username=' + Username + '&Password=' + Password);
+  GetAttendance(dateFrom, dateTo, EmployeeId) {
+    // tslint:disable-next-line:max-line-length
+    return this.http.get(environment.baseUrl + 'Reports/getAttendance?dateFrom=' + dateFrom + '&dateTo=' + dateTo + '&EmployeeId=' + EmployeeId);
   }
 
   GetLoanLedger(Username, Password) {

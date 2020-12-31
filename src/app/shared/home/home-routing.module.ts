@@ -9,21 +9,21 @@ const routes: Routes = [
     path: '', component: HomeComponent,
     children: [
       {
-        path: 'Advance-request', loadChildren: '../../components/advance-reques/advancerequest.module#AdvanceRequestModule',
+        // tslint:disable-next-line:max-line-length
+        path: 'Advance-request', loadChildren: () => import('../../components/advance-request/advancerequest.module').then(m => m.AdvanceRequestModule)
       },
       {
-        path: 'Attendance', loadChildren: '../../components/attendance/attendance.module#AttendanceModule'
+        path: 'Attendance', loadChildren: () => import('../../components/attendance/attendance.module').then(m => m.AttendanceModule)
       },
       {
-        path: 'Loan-Ledger', loadChildren: '../../components/loan-ledger/loanledger.module#LoanLedgerModule'
+        path: 'Loan-Ledger', loadChildren: () => import('../../components/loan-ledger/loanledger.module').then(m => m.LoanLedgerModule)
+      },
+      {
+        path: 'Loan-request', loadChildren: () => import('../../components/loan-request/loanrequest.module').then(m => m.LoanRequstModule)
 
       },
       {
-        path: 'Loan-request', loadChildren: '../../components/loan-request/loanrequest.module#LoanRequstModule'
-
-      },
-      {
-        path: 'Payslip', loadChildren: '../../components/payslip/payslip.module#PayslipModule'
+        path: 'Payslip', loadChildren: () => import('../../components/payslip/payslip.module').then(m => m.PayslipModule)
 
       },
     ]

@@ -8,7 +8,7 @@ import { AttendanceRoutingModule } from './attendance-routing.module';
 
 @NgModule({
   declarations: [
-    
+
   ],
   imports: [
     ReactiveFormsModule,
