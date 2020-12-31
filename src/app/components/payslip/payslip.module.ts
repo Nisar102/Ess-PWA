@@ -1,3 +1,4 @@
+import { PayslipComponent } from './payslip.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,7 @@ import { PayslipRoutingModule } from './payslip-routing.module';
 
 @NgModule({
   declarations: [
-    
+    PayslipComponent
   ],
   imports: [
     ReactiveFormsModule,
