@@ -23,7 +23,7 @@ const routes: Routes = [
 
       },
       {
-        path: 'Payslip', loadChildren:'../../components/payslip/payslip.module#PayslipModule'
+        path: 'Payslip', loadChildren: '../../components/payslip/payslip.module#PayslipModule'
 
       },
     ]
