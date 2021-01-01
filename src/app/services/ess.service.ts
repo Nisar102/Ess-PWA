@@ -25,8 +25,8 @@ export class EssService {
     return this.http.get(environment.baseUrl + 'Login/GetUserLogin?Username=' + Username + '&Password=' + Password);
   }
 
-  GetPaySlip(Username, Password) {
-    return this.http.get(environment.baseUrl + 'Login/GetUserLogin?Username=' + Username + '&Password=' + Password);
+  GetPaySlip(dateFrom, EmployeeId) {
+    return this.http.get(environment.baseUrl + 'Reports/getSalarySlip?dateFrom=' + dateFrom + '&EmployeeId=' + EmployeeId);
   }
   LoanRequest(Username, Password) {
     return this.http.get(environment.baseUrl + 'Login/GetUserLogin?Username=' + Username + '&Password=' + Password);
