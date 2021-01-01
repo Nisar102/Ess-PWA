@@ -12,9 +12,8 @@ import { PayslipRoutingModule } from './payslip-routing.module';
     PayslipComponent
   ],
   imports: [
-    ReactiveFormsModule,
-    FormsModule,
     CommonModule,
+    FormsModule,
     PayslipRoutingModule
   ],
   providers: []

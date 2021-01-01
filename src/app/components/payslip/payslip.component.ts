@@ -51,29 +51,31 @@ export class PayslipComponent implements OnInit {
 
       this.data = r;
 
-      this.ProcessId = this.data[0]['ProcessId'];
-      this.EmployeeName = this.data[0]['EmployeeName'];
-      this.DepartmentName = this.data[0]['DepartmentName'];
-      this.BasicPay = this.data[0]['BasicPay'];
-      this.EmployeeCode = this.data[0]['EmployeeCode'];
-      this.BranchName = this.data[0]['BranchName'];
-      this.Date = this.data[0]['Date'];
-      this.PresentDays = this.data[0]['PresentDays'];
-      this.Absent = this.data[0]['Absent'];
-      this.Lates = this.data[0]['Lates'];
-      this.WorkingDays = this.data[0]['WorkingDays'];
-      this.Leaves = this.data[0]['ProcessLeavesId'];
-      this.EarlyGones = this.data[0]['EarlyGones'];
-      this.HalfDays = this.data[0]['HalfDays'];
-      this.TotalAllowance = this.data[0]['TotalAllowance'];
-      this.OverTimeSalary = this.data[0]['OverTimeSalary'];
-      this.AddIncome = this.data[0]['AddIncome'];
-      this.TotalSalary = this.data[0]['TotalSalary'];
-      this.TotalLoan = this.data[0]['TotalLoan'];
-      this.Advance = this.data[0]['Advance'];
-      this.Tax = this.data[0]['Tax'];
-      this.EOBI = this.data[0]['EOBI'];
-      this.FinalSalary = this.data[0]['FinalSalary'];
+      console.log(JSON.stringify(this.data));
+
+      this.ProcessId = this.data['ProcessId'];
+      this.EmployeeName = this.data['EmployeeName'];
+      this.DepartmentName = this.data['DepartmentName'];
+      this.BasicPay = this.data['BasicPay'];
+      this.EmployeeCode = this.data['EmployeeCode'];
+      this.BranchName = this.data['BranchName'];
+      this.Date = this.data['Date'];
+      this.PresentDays = this.data['PresentDays'];
+      this.Absent = this.data['Absent'];
+      this.Lates = this.data['Lates'];
+      this.WorkingDays = this.data['WorkingDays'];
+      this.Leaves = this.data['ProcessLeavesId'];
+      this.EarlyGones = this.data['EarlyGones'];
+      this.HalfDays = this.data['HalfDays'];
+      this.TotalAllowance = this.data['TotalAllowance'];
+      this.OverTimeSalary = this.data['OverTimeSalary'];
+      this.AddIncome = this.data['AddIncome'];
+      this.TotalSalary = this.data['TotalSalary'];
+      this.TotalLoan = this.data['TotalLoan'];
+      this.Advance = this.data['Advance'];
+      this.Tax = this.data['Tax'];
+      this.EOBI = this.data['EOBI'];
+      this.FinalSalary = this.data['FinalSalary'];
 
     }, (error: HttpErrorResponse) => {
       console.log(error);

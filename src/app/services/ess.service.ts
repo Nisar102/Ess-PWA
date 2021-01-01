@@ -21,8 +21,8 @@ export class EssService {
     return this.http.get(environment.baseUrl + 'Reports/getAttendance?dateFrom=' + dateFrom + '&dateTo=' + dateTo + '&EmployeeId=' + EmployeeId);
   }
 
-  GetLoanLedger(Username, Password) {
-    return this.http.get(environment.baseUrl + 'Login/GetUserLogin?Username=' + Username + '&Password=' + Password);
+  GetLoanLedger(dateFrom, dateTo, EmployeeId) {
+    return this.http.get(environment.baseUrl + 'Reports/getLoanLedger?DateFrom=' + dateFrom + '&DateTo=' + dateTo + '&EmployeeId=' + EmployeeId);
   }
 
   GetPaySlip(dateFrom, EmployeeId) {

@@ -1,0 +1,30 @@
+<div class="row">
+    
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>LoanName</th>
+                        <th>Remarks</th>
+                        <th>LoanAmount</th>
+                        <th>DeductionAmount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of data">
+                        <td>{{item.Date}}</td>
+                        <td>{{item.LoanName}}</td>
+                        <td>{{item.Remarks}}</td>
+                        <td>{{item.LoanAmount}}</td>
+                        <td>{{item.DeductionAmount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    
+</div>
