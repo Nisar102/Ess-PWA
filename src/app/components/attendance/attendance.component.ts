@@ -16,7 +16,7 @@ export class AttendanceComponent implements OnInit {
   constructor(private _apiService: EssService) { }
 
   ngOnInit() {
-    this.GetAttendance();
+    // this.GetAttendance();
   }
 
   GetAttendance() {
