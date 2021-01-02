@@ -1,3 +1,4 @@
+import { NgxSpinnerService } from 'ngx-spinner';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { EssService } from 'src/app/services/ess.service';
@@ -16,13 +17,14 @@ export class LoanLedgerComponent implements OnInit {
   Remarks;
   LoanAmount;
   DeductionAmount;
+  message = "No data to display";
 
 
   dateFrom = '2020-05-01';
   dateTo = '2020-07-31';
   EmployeeId = '39';
 
-  constructor(private _apiService: EssService) { }
+  constructor(private _apiService: EssService, private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
     this.GetLoanLedger();
@@ -31,14 +33,20 @@ export class LoanLedgerComponent implements OnInit {
   GetLoanLedger() {
 
 
+    this.spinner.show();
 
     this._apiService.GetLoanLedger(this.dateFrom, this.dateTo, this.EmployeeId).subscribe(r => {
 
       this.data = r;
+      if (this.data.length === 0) {
+        this.message = 'No record found';
+      }
 
+      this.spinner.hide();
 
       console.log(JSON.stringify(this.data));
     }, (error: HttpErrorResponse) => {
+      this.spinner.hide();
       console.log(error.error);
     });
   }

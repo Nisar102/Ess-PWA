@@ -1,3 +1,4 @@
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 import { NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ import { LoanLedgerComponent } from './loan-ledger.component';
   imports: [
     CommonModule,
     FormsModule,
+    NgxSpinnerModule,
     LoanLedgerRoutingModule
   ],
   providers: []

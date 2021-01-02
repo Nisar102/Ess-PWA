@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AttendanceRoutingModule } from './attendance-routing.module';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -14,6 +15,7 @@ import { AttendanceRoutingModule } from './attendance-routing.module';
   imports: [
     CommonModule,
     FormsModule,
+    NgxSpinnerModule,
     AttendanceRoutingModule
   ],
   providers: []

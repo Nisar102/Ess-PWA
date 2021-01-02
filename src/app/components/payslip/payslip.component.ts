@@ -1,3 +1,4 @@
+import { NgxSpinnerService } from 'ngx-spinner';
 import { HttpErrorResponse } from '@angular/common/http';
 import { EssService } from './../../services/ess.service';
 import { Component, OnInit } from '@angular/core';
@@ -40,7 +41,9 @@ export class PayslipComponent implements OnInit {
   EmployeeId = '39';
   dateFrom = '2020-05-01';
 
-  constructor(private _apiService: EssService) { }
+  message = "No data to display";
+
+  constructor(private _apiService: EssService, private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
     // this.GetPaySlip();
@@ -48,10 +51,15 @@ export class PayslipComponent implements OnInit {
 
   GetPaySlip() {
 
+    this.spinner.show();
 
     this._apiService.GetPaySlip(this.dateFrom, this.EmployeeId).subscribe(r => {
 
       this.data = r;
+      this.spinner.hide();
+      // if (this.data.length === 0) {
+      //   this.message = 'No record found';
+      // }
 
       console.log(JSON.stringify(this.data));
 
@@ -81,6 +89,7 @@ export class PayslipComponent implements OnInit {
       this.HoursWorked = this.data['HoursWorked'];
 
     }, (error: HttpErrorResponse) => {
+      this.spinner.hide();
       console.log(error);
     });
   }
