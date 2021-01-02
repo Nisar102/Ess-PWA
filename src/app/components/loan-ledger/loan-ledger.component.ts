@@ -17,22 +17,25 @@ export class LoanLedgerComponent implements OnInit {
   LoanAmount;
   DeductionAmount;
 
+
+  dateFrom = '2020-05-01';
+  dateTo = '2020-07-31';
+  EmployeeId = '39';
+
   constructor(private _apiService: EssService) { }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.GetLoanLedger();
   }
 
   GetLoanLedger() {
 
-    const dateFrom = '2020-05-01';
-    const dateTo = '2020-07-31';
-    const EmployeeId = '39';
 
-    this._apiService.GetLoanLedger(dateFrom, dateTo, EmployeeId).subscribe(r => {
+
+    this._apiService.GetLoanLedger(this.dateFrom, this.dateTo, this.EmployeeId).subscribe(r => {
 
       this.data = r;
-    
+
 
       console.log(JSON.stringify(this.data));
     }, (error: HttpErrorResponse) => {

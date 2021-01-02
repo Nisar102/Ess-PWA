@@ -6,6 +6,40 @@
       </div>
       <div class="card-body">
 
+        <div class="row">
+
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="form-group">
+              <label>dateFrom</label>
+              <input class="form-control" type="text" [(ngModel)]="dateFrom">
+            </div>
+          </div>
+
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="form-group">
+              <label>date To</label>
+              <input class="form-control" type="text" [(ngModel)]="dateTo">
+            </div>
+          </div>
+
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="form-group">
+              <label>EmployeeId</label>
+              <input class="form-control" type="text" [(ngModel)]="EmployeeId">
+            </div>
+          </div>
+
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <button type="button" class="btn btn-default" (click)="GetAttendance()">
+              View
+            </button>
+          </div>
+
+
+
+
+        </div>
+
         <div class="table-responsive">
           <table class="table table-hover">
             <thead>

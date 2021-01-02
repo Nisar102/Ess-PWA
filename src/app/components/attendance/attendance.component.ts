@@ -13,6 +13,10 @@ export class AttendanceComponent implements OnInit {
   data = [];
   myData: any;
 
+  dateFrom = '2020-04-29';
+  dateTo = '2020-05-31';
+  EmployeeId = '3775';
+
   constructor(private _apiService: EssService) { }
 
   ngOnInit() {
@@ -20,10 +24,8 @@ export class AttendanceComponent implements OnInit {
   }
 
   GetAttendance() {
-    const dateFrom = '2020-04-29';
-    const dateTo = '2020-05-31';
-    const EmployeeId = 3775;
-    this._apiService.GetAttendance(dateFrom, dateTo, EmployeeId).subscribe((r: any) => {
+
+    this._apiService.GetAttendance(this.dateFrom, this.dateTo, this.EmployeeId).subscribe((r: any) => {
       console.log(r);
       this.data = r;
       console.log('data' + JSON.stringify(this.data));

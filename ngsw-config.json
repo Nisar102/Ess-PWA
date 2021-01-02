@@ -29,9 +29,15 @@
   "dataGroups": [
     {
       "name": "ess-api",
-      "urls": ["http://localhost:33584/api/Login/**"],
+      "urls": [
+        "http://smartworkssystems.com/payrollapifinal/api/Login/**",
+        "http://smartworkssystems.com/payrollapifinal/api/Reports/**"
+      ],
       "cacheConfig": {
-        "strategy": "freshness"
+        "strategy": "freshness",
+        "maxSize": 20,
+        "maxAge": "1d",
+        "timeout": "5s"
       }
     }
   ]

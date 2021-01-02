@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-12">
-     <div class="card">
-       <div class="card-header">
-         Payslip
-       </div>
-       <div class="card-body">
+    <div class="card">
+      <div class="card-header">
+        Payslip
+      </div>
+      <div class="card-body">
 
         <div class="row mb-3">
 
@@ -24,108 +24,124 @@
 
 
           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-             <button type="button" class="btn btn-default btn-sm" (click)="GetPaySlip()">
-               View
-             </button>
+            <button type="button" class="btn btn-default btn-sm" (click)="GetPaySlip()">
+              View
+            </button>
           </div>
 
 
 
         </div>
 
-          <div class="row">
-             <div class="col-4">
-               <div>Salary Slip# : {{ProcessId}}</div>
-               <div>Employee Name: {{EmployeeName}}</div>
-               <div>Department : {{DepartmentName}}</div>
-             </div>
-             <div class="col-4">
-             </div>
-             <div class="col-4">
-              <div>Employee Code : {{EmployeeCode}}</div>
-              <div>Branch : {{BranchName}}</div>
-              <div>Salary Of Month : {{Date}}</div>
-             </div>
-          </div>
+        <div class="row">
 
-          <div class="row">
-             <div class="col-2">
-               <div>present days : {{PresentDays}}</div>
-             </div>
-             <div class="col-2">
-               <div>Absent: {{Absent}}</div>
-             </div>
-             <div class="col-2">
-               <div>Late: {{Lates}}</div>
-             </div>
-             <div class="col-2">
-               <div>Over Time: {{OverTimeSalary}}</div>
-             </div>
-             <div class="col-2">
-               <div>Worked hours: {{HoursWorked}}</div>
-             </div>
-          </div>
 
-          <div class="row">
-            <div class="col-6">
-              <div>Leaves: {{Leaves}}</div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+            <div class="d-flex justify-content-between">
+              <div class="p-2">Salary Slip# :</div>
+              <div class="p-2">{{ProcessId}}</div>
             </div>
-            <div class="col-6">
-              <div>Half Days: {{HalfDays}}</div>
+            <div class="d-flex justify-content-between">
+              <div class="p-1">Salary Slip# :</div>
+              <div class="p-1">{{ProcessId}}</div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="p-1">Employee Name :</div>
+              <div class="p-1">{{EmployeeName}}</div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="p-1">Department :</div>
+              <div class="p-1">{{DepartmentName}}</div>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-2">
-              <div>Basic Pay: {{BasicPay}}</div>
-            </div>
-            <div class="col-2">
-              <div>Total Allowance: {{TotalAllowance}}</div>
-            </div>
-            <div class="col-2">
-              <div>Over Time: {{OverTimeSalary}}</div>
-            </div>
-            <div class="col-2">
-              <div>Add Income: {{AddIncome}}</div>
-            </div>
-            <div class="col-2">
-              <div>Total Earnings: {{TotalSalary}}s</div>
-            </div>
+          <div class="col-4">
+          </div>
+          <div class="col-4">
+            <div>Employee Code : {{EmployeeCode}}</div>
+            <div>Branch : {{BranchName}}</div>
+            <div>Salary Of Month : {{Date}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-2">
+            <div>present days : {{PresentDays}}</div>
+          </div>
+          <div class="col-2">
+            <div>Absent: {{Absent}}</div>
+          </div>
+          <div class="col-2">
+            <div>Late: {{Lates}}</div>
+          </div>
+          <div class="col-2">
+            <div>Over Time: {{OverTimeSalary}}</div>
+          </div>
+          <div class="col-2">
+            <div>Worked hours: {{HoursWorked}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <div>Leaves: {{Leaves}}</div>
+          </div>
+          <div class="col-6">
+            <div>Half Days: {{HalfDays}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-2">
+            <div>Basic Pay: {{BasicPay}}</div>
+          </div>
+          <div class="col-2">
+            <div>Total Allowance: {{TotalAllowance}}</div>
+          </div>
+          <div class="col-2">
+            <div>Over Time: {{OverTimeSalary}}</div>
+          </div>
+          <div class="col-2">
+            <div>Add Income: {{AddIncome}}</div>
+          </div>
+          <div class="col-2">
+            <div>Total Earnings: {{TotalSalary}}s</div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-2">
+            <div>Loan: {{TotalLoan}}</div>
+          </div>
+          <div class="col-2">
+            <div>advance: {{Advance}}</div>
+          </div>
+          <div class="col-2">
+            <div>Tax: {{Tax}}</div>
+          </div>
+          <div class="col-2">
+            <div>EOBI: {{EOBI}}</div>
+          </div>
+
+          <div class="col-2">
+            <div>Total Deduction: {{TotalLoan + Advance + Tax + EOBI}}</div>
           </div>
 
 
-          <div class="row">
-            <div class="col-2">
-              <div>Loan: {{TotalLoan}}</div>
-            </div>
-            <div class="col-2">
-              <div>advance: {{Advance}}</div>
-            </div>
-            <div class="col-2">
-              <div>Tax: {{Tax}}</div>
-            </div>
-            <div class="col-2">
-              <div>EOBI: {{EOBI}}</div>
-            </div>
+        </div>
 
-            <div class="col-2">
-              <div>Total Deduction: {{TotalLoan + Advance + Tax + EOBI}}</div>
-            </div>
-
-
-          </div>
-
-          <div class="row">
-            <div class="col-12">
-              <div class="float-right">
-                <div>Final Salary : {{FinalSalary}}</div>
-              </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="float-right">
+              <div>Final Salary : {{FinalSalary}}</div>
             </div>
           </div>
+        </div>
 
 
 
-       </div>
-     </div>
+      </div>
+    </div>
   </div>
 </div>
