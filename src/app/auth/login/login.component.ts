@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
   OnSubmit() {
 
     this._apiService.Login(this.LoginForm.controls['Username'].value, this.LoginForm.controls['Password'].value).subscribe(r => {
+      console.log(r);
       this.router.navigate(['home']);
     }, (error: HttpErrorResponse) => {
       console.log(error.error);
