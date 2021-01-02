@@ -6,6 +6,33 @@
        </div>
        <div class="card-body">
 
+        <div class="row mb-3">
+
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="form-group">
+              <label>Date From</label>
+              <input [(ngModel)]="dateFrom" class="form-control" type="text" placeholder="date from">
+            </div>
+          </div>
+
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="form-group">
+              <label>EmployeeId</label>
+              <input [(ngModel)]="EmployeeId" class="form-control" type="text" placeholder="employeeId">
+            </div>
+          </div>
+
+
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+             <button type="button" class="btn btn-default btn-sm" (click)="GetPaySlip()">
+               View
+             </button>
+          </div>
+
+
+
+        </div>
+
           <div class="row">
              <div class="col-4">
                <div>Salary Slip# : {{ProcessId}}</div>
@@ -17,7 +44,7 @@
              <div class="col-4">
               <div>Employee Code : {{EmployeeCode}}</div>
               <div>Branch : {{BranchName}}</div>
-              <div>Salary Of Month : </div>
+              <div>Salary Of Month : {{Date}}</div>
              </div>
           </div>
 
@@ -35,7 +62,7 @@
                <div>Over Time: {{OverTimeSalary}}</div>
              </div>
              <div class="col-2">
-               <div>Worked hours: </div>
+               <div>Worked hours: {{HoursWorked}}</div>
              </div>
           </div>
 
@@ -62,20 +89,17 @@
               <div>Add Income: {{AddIncome}}</div>
             </div>
             <div class="col-2">
-              <div>Total Earnings: Total Earnings</div>
+              <div>Total Earnings: {{TotalSalary}}s</div>
             </div>
           </div>
 
 
           <div class="row">
             <div class="col-2">
-              <div>Loan: Loan</div>
+              <div>Loan: {{TotalLoan}}</div>
             </div>
             <div class="col-2">
               <div>advance: {{Advance}}</div>
-            </div>
-            <div class="col-2">
-              <div>Loan: {{TotalLoan}}</div>
             </div>
             <div class="col-2">
               <div>Tax: {{Tax}}</div>
@@ -85,7 +109,7 @@
             </div>
 
             <div class="col-2">
-              <div>Total Deduction: Total Deduction</div>
+              <div>Total Deduction: {{TotalLoan + Advance + Tax + EOBI}}</div>
             </div>
 
 

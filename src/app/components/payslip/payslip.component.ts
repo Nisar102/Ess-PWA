@@ -35,19 +35,21 @@ export class PayslipComponent implements OnInit {
   Tax;
   EOBI;
   FinalSalary;
+  HoursWorked;
+
+  EmployeeId = '39';
+  dateFrom = '2020-05-01';
 
   constructor(private _apiService: EssService) { }
 
   ngOnInit() {
-    this.GetPaySlip();
+    // this.GetPaySlip();
   }
 
   GetPaySlip() {
 
-    const dateFrom = '2020-05-01';
-    const EmployeeId = '39';
 
-    this._apiService.GetPaySlip(dateFrom, EmployeeId).subscribe(r => {
+    this._apiService.GetPaySlip(this.dateFrom, this.EmployeeId).subscribe(r => {
 
       this.data = r;
 
@@ -76,6 +78,7 @@ export class PayslipComponent implements OnInit {
       this.Tax = this.data['Tax'];
       this.EOBI = this.data['EOBI'];
       this.FinalSalary = this.data['FinalSalary'];
+      this.HoursWorked = this.data['HoursWorked'];
 
     }, (error: HttpErrorResponse) => {
       console.log(error);
